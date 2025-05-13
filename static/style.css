@@ -1,0 +1,5 @@
+.card-img-top {
+  max-height: 200px;
+  width: 30%;        /* sorgt dafür, dass das Bild die Card-Breite bleibt */
+  object-fit: cover;  /* schneidet das Bild zu, statt es zu verzerren */
+}
