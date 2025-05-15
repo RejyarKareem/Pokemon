@@ -27,11 +27,7 @@ async function getAllBoosterpacks() {
   return packs;
 }
 
-/**
- * Einzelnes Boosterpack per ID abrufen
- * @param {string} id - Objekt-ID
- * @returns {Promise<Object|null>} Boosterpack oder null
- */
+ /* Einzelnes Boosterpack per ID abrufen */
 async function getBoosterpackById(id) {
   const collection = db.collection("boosterpacks");
   let pack = null;
@@ -48,11 +44,7 @@ async function getBoosterpackById(id) {
   return pack;
 }
 
-/**
- * Neues Boosterpack anlegen
- * @param {Object} packData - Boosterpack-Daten
- * @returns {Promise<string|null>} Neue ID als String oder null
- */
+/* Neues Boosterpack anlegen*/
 async function createBoosterpack(packData) {
   const collection = db.collection("boosterpacks");
   try {
@@ -64,11 +56,7 @@ async function createBoosterpack(packData) {
   return null;
 }
 
-/**
- * Boosterpack aktualisieren
- * @param {Object} packData - Boosterpack mit _id und aktualisierten Feldern
- * @returns {Promise<string|null>} ID oder null
- */
+/* Boosterpack aktualisieren*/
 async function updateBoosterpack(packData) {
   const collection = db.collection("boosterpacks");
   try {
@@ -89,11 +77,7 @@ async function updateBoosterpack(packData) {
   return null;
 }
 
-/**
- * Boosterpack löschen
- * @param {string} id - Objekt-ID
- * @returns {Promise<string|null>} Gelöschte ID oder null
- */
+/* Boosterpack löschen*/
 async function deleteBoosterpack(id) {
   const collection = db.collection("boosterpacks");
   try {
@@ -113,10 +97,7 @@ async function deleteBoosterpack(id) {
 // Card-Funktionen
 //////////////////////////////////////////
 
-/**
- * Alle Karten abrufen
- * @returns {Promise<Array>} Array von Karten-Objekten
- */
+/* Alle Karten abrufen*/
 async function getAllCards() {
   const collection = db.collection("cards");
   let cards = [];
@@ -131,11 +112,7 @@ async function getAllCards() {
   return cards;
 }
 
-/**
- * Einzelne Karte per ID abrufen
- * @param {string} id - Objekt-ID
- * @returns {Promise<Object|null>} Karte oder null
- */
+/* Einzelne Karte per ID abrufen */
 async function getCardById(id) {
   const collection = db.collection("cards");
   let card = null;
@@ -152,11 +129,7 @@ async function getCardById(id) {
   return card;
 }
 
-/**
- * Neue Karte anlegen
- * @param {Object} cardData - Kartendaten
- * @returns {Promise<string|null>} Neue ID oder null
- */
+/* Neue Karte anlegen*/
 async function createCard(cardData) {
   const collection = db.collection("cards");
   try {
@@ -168,11 +141,7 @@ async function createCard(cardData) {
   return null;
 }
 
-/**
- * Karte aktualisieren
- * @param {Object} cardData - Karte mit _id und neuen Feldern
- * @returns {Promise<string|null>} ID oder null
- */
+/* Karte aktualisieren*/
 async function updateCard(cardData) {
   const collection = db.collection("cards");
   try {
@@ -193,11 +162,7 @@ async function updateCard(cardData) {
   return null;
 }
 
-/**
- * Karte löschen
- * @param {string} id - Objekt-ID
- * @returns {Promise<string|null>} Gelöschte ID oder null
- */
+/* Karte löschen*/
 async function deleteCard(id) {
   const collection = db.collection("cards");
   try {
@@ -213,10 +178,7 @@ async function deleteCard(id) {
   return null;
 }
 
-/**
- * Alle Kontaktformular-Submissions abrufen
- * @returns {Promise<Array>} Array von Submission-Objekten
- */
+/* Alle Kontaktformular-Submissions abrufen*/
 async function getAllContactSubmissions() {
   const collection = db.collection("contactSubmissions");
   let subs = [];
@@ -234,11 +196,7 @@ async function getAllContactSubmissions() {
   return subs;
 }
 
-/**
- * Neue Kontakt-Submission anlegen
- * @param {Object} submissionData - Felder: name, email, message
- * @returns {Promise<string|null>} ID der neuen Submission oder null
- */
+/* Neue Kontakt-Submission anlegen*/
 async function createContactSubmission(submissionData) {
   const collection = db.collection("contactSubmissions");
   try {
@@ -252,10 +210,7 @@ async function createContactSubmission(submissionData) {
   }
 }
 
-/**
- * Alle PSA-Grading‐Anfragen abrufen
- * @returns {Promise<Array>} Array von PSA-Grading–Objekten
- */
+/* Alle PSA-Grading‐Anfragen abrufen*/
 async function getAllPSAGradingSubmissions() {
   const collection = db.collection("psaGradingSubmissions");
   let subs = [];
@@ -271,11 +226,7 @@ async function getAllPSAGradingSubmissions() {
   return subs;
 }
 
-/**
- * Neue PSA-Grading‐Anfrage anlegen
- * @param {Object} gradingData - Daten der PSA-Submission
- * @returns {Promise<string|null>} ID der neuen Submission oder null
- */
+/* Neue PSA-Grading‐Anfrage anlegen*/
 async function createPSAGradingSubmission(gradingData) {
   const collection = db.collection("psaGradingSubmissions");
   try {
