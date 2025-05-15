@@ -19,7 +19,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Zusammenklappbarer Menü-Bereich -->
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <!-- Einzelne Navigationslinks -->
