@@ -5,7 +5,7 @@
   <video
     src="/videos/pokemon_theme.mp4"
     class="img-fluid rounded shadow"
-    style="max-height: 500px; width: 300px;"
+    style="max-height: 500px; width: fit-content;"
     autoplay
     loop
     muted
