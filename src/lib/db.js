@@ -9,10 +9,7 @@ const db = client.db("Pokemon");
 // Boosterpack-Funktionen
 //////////////////////////////////////////
 
-/**
- * Alle Boosterpacks abrufen
- * @returns {Promise<Array>} Array von Boosterpack-Objekten
- */
+/* Alle Boosterpacks abrufen*/
 async function getAllBoosterpacks() {
   const collection = db.collection("boosterpacks");
   let packs = [];
