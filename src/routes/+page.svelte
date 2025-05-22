@@ -1,23 +1,21 @@
-<div class="homepage-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="homepage-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container text-center py-5">
     <!-- Logo oben zentriert und vergrößert -->
     <div class="image-container mb-5">
-  <video
-    src="/videos/pokemon_theme.mp4"
-    class="img-fluid rounded shadow"
-    style="max-height: 500px; width: fit-content;"
-    autoplay
-    loop
-    muted
-    playsinline
-  >
-    Dein Browser unterstützt das Video-Tag nicht.
-  </video>
-</div>
+      <div class="video-wrapper">
+        <video src="/videos/pokemon_theme.mp4" autoplay loop muted playsinline
+        ></video>
+      </div>
+    </div>
 
-    <h1 class="display-2 fw-bold mb-4">Willkommen in der Pokémon Boosterwelt</h1>
+    <h1 class="display-2 fw-bold mb-4">
+      Willkommen in der Pokémon Boosterwelt
+    </h1>
     <p class="lead fs-4 mb-5">
-      Entdecke unsere Sammlung von <strong>Boosterpacks</strong> und <strong>Pokémon-Karten</strong>.<br />
+      Entdecke unsere Sammlung von <strong>Boosterpacks</strong> und
+      <strong>Pokémon-Karten</strong>.<br />
       Neue Karten werden laufend hinzugefügt – perfekt für Fans und Sammler!
     </p>
 
@@ -42,6 +40,27 @@
 </div>
 
 <style>
+  .video-wrapper {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+
   .homepage-bg {
     background: linear-gradient(135deg, #ffcb05, #3b4cca);
     min-height: 100vh;

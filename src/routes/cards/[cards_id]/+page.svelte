@@ -1,5 +1,4 @@
 <script lang="ts">
-  // Props aus load(): data.card enthält das Karten-Objekt, form hält Action-Fehler
   let { data, form } = $props();
   const card = data.card;
 </script>

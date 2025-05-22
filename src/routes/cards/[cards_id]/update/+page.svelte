@@ -1,6 +1,4 @@
 <script lang="ts">
-  // Props: `data.card` enthält das zu bearbeitende Karten-Objekt
-  // `form` liefert Fehler-/Erfolgsmeldungen aus der Server-Action
   let { data, form } = $props();
   const card = data.card;
 </script>

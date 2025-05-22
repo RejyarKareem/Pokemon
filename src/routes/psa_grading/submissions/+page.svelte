@@ -1,5 +1,4 @@
 <script lang="ts">
-  // Props: `data.submissions` enthält das Array aller PSA-Grading-Anfragen
   let { data } = $props();
   const submissions = data.submissions;
 </script>

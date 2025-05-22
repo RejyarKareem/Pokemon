@@ -1,5 +1,4 @@
 <script lang="ts">
-  // Props: `data.submissions` enthält das Array aller Kontaktanfragen
   let { data } = $props();
   const submissions = data.submissions;
 </script>

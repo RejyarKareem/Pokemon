@@ -9,12 +9,12 @@ const db = client.db("Pokemon");
 // Boosterpack-Funktionen
 //////////////////////////////////////////
 
-/* Alle Boosterpacks abrufen*/
-async function getAllBoosterpacks() {
+/* Alle Boosterpacks abrufen – optional mit Filter */
+async function getAllBoosterpacks(filter = {}, sort = {}) {
   const collection = db.collection("boosterpacks");
   let packs = [];
   try {
-    packs = await collection.find({}).toArray();
+    packs = await collection.find(filter).sort(sort).toArray();
     packs.forEach(pack => {
       pack._id = pack._id.toString();
     });
@@ -90,16 +90,49 @@ async function deleteBoosterpack(id) {
   return null;
 }
 
+/* Distinct-Funktionen für Filteroptionen */
+async function getDistinctLanguages() {
+  const collection = db.collection('boosterpacks');
+  let languages = [];
+  try {
+    languages = await collection.distinct('language');
+  } catch (error) {
+    console.error('getDistinctLanguages error:', error);
+  }
+  return languages;
+}
+
+async function getDistinctNames() {
+  const collection = db.collection('boosterpacks');
+  let names = [];
+  try {
+    names = await collection.distinct('name');
+  } catch (error) {
+    console.error('getDistinctNames error:', error);
+  }
+  return names;
+}
+
+async function getDistinctCardsPerPack() {
+  const collection = db.collection('boosterpacks');
+  let options = [];
+  try {
+    options = await collection.distinct('cards_per_pack');
+  } catch (error) {
+    console.error('getDistinctCardsPerPack error:', error);
+  }
+  return options;
+}
+
 //////////////////////////////////////////
 // Card-Funktionen
 //////////////////////////////////////////
 
-/* Alle Karten abrufen*/
-async function getAllCards() {
+async function getAllCards(filter = {}, sort = {}) {
   const collection = db.collection("cards");
   let cards = [];
   try {
-    cards = await collection.find({}).toArray();
+    cards = await collection.find(filter).sort(sort).toArray();
     cards.forEach(card => {
       card._id = card._id.toString();
     });
@@ -236,6 +269,37 @@ async function createPSAGradingSubmission(gradingData) {
   }
 }
 
+async function getDistinctCardSets() {
+  const collection = db.collection("cards");
+  try {
+    return await collection.distinct("set");
+  } catch (error) {
+    console.error("getDistinctCardSets error:", error);
+    return [];
+  }
+}
+
+async function getDistinctCardTypes() {
+  const collection = db.collection("cards");
+  try {
+    return await collection.distinct("type");
+  } catch (error) {
+    console.error("getDistinctCardTypes error:", error);
+    return [];
+  }
+}
+
+async function getDistinctCardRarities() {
+  const collection = db.collection("cards");
+  try {
+    return await collection.distinct("rarity");
+  } catch (error) {
+    console.error("getDistinctCardRarities error:", error);
+    return [];
+  }
+}
+
+
 // Exportiere die Funktionen
 export default {
   getAllBoosterpacks,
@@ -251,5 +315,11 @@ export default {
   getAllContactSubmissions,
   createContactSubmission,
   getAllPSAGradingSubmissions,
-  createPSAGradingSubmission
+  createPSAGradingSubmission,
+  getDistinctLanguages,
+  getDistinctNames,
+  getDistinctCardsPerPack,
+   getDistinctCardSets,
+  getDistinctCardTypes,
+  getDistinctCardRarities
 };

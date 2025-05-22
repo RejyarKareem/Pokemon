@@ -40,15 +40,15 @@
 
         <!-- Profil-Dropdown ganz rechts -->
         <li class="nav-item dropdown">
+          <!-- svelte-ignore a11y_invalid_attribute -->
           <a
             class="nav-link dropdown-toggle d-flex align-items-center"
-            href="#top"
+            href="#"
             id="profileDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <!-- Profil-Icon -->
             <img
               src="/images/profile.jpg"
               alt="Profil"
@@ -59,7 +59,10 @@
             Profil
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-            <!-- Unterpunkte im Dropdown -->
+            <li>
+              <a class="dropdown-item" href="/profile">Mein Profil</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item" href="/contact/submissions">
                 Eingereichte Kontaktformulare

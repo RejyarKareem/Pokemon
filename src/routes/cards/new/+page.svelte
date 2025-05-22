@@ -1,5 +1,4 @@
 <script lang="ts">
-  // `form` enthält eventuelle Fehler- oder Erfolgsmeldungen von der Server-Action
   let { form } = $props();
 </script>
 
