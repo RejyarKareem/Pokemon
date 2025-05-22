@@ -1,7 +1,4 @@
 <script lang="ts">
-  // Props aus load():
-  // - data.pack enthält das geladene Boosterpack-Objekt
-  // - form enthält Fehler-/Erfolgsmeldungen aus der Action
   let { data, form } = $props();
   const pack = data.pack;
 </script>

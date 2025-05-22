@@ -62,6 +62,9 @@
             <li>
               <a class="dropdown-item" href="/profile">Mein Profil</a>
             </li>
+            <li>
+              <a class="dropdown-item" href="/profile/new">Neues Profil anlegen</a>
+            </li>
             <li><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item" href="/contact/submissions">

@@ -1,43 +1,37 @@
-<script>
-  const user = {
-    username: 'pikafan99',
-    anrede: 'Herr',
-    vorname: 'Ash',
-    nachname: 'Ketchum',
-    geburtstag: '01.01.1990',
-    adresse: {
-      strasse: 'Route 1',
-      plz: '12345',
-      ort: 'Kanto City',
-      land: 'Kanto'
-    },
-    email: 'ash@pokemon.com'
-  };
+<script lang="ts">
+  let { data } = $props();
+  const user = data.user;
 </script>
 
-<div class="profile-bg text-white d-flex flex-column align-items-start px-4 px-md-5 py-5">
-  <h1 class="display-5 fw-bold mb-4">Mein Profil</h1>
+{#if !user}
+  <p class="text-white px-4 py-5">Kein Profil gefunden 😢</p>
+{:else}
+  <div class="profile-bg text-white d-flex flex-column align-items-start px-4 px-md-5 py-5">
+    <h1 class="display-5 fw-bold mb-4">Mein Profil</h1>
 
-  <section class="profile-section mb-5">
-    <h5 class="fw-semibold mb-3">👤 Benutzerdaten</h5>
-    <ul class="profile-list">
-      <li><strong>Benutzername:</strong> {user.username}</li>
-      <li><strong>Anrede:</strong> {user.anrede}</li>
-      <li><strong>Name:</strong> {user.vorname} {user.nachname}</li>
-      <li><strong>Geburtstag:</strong> {user.geburtstag}</li>
-      <li><strong>E-Mail:</strong> {user.email}</li>
-    </ul>
-  </section>
+    <section class="profile-section mb-5">
+      <h5 class="fw-semibold mb-3">👤 Benutzerdaten</h5>
+      <ul class="profile-list">
+        <li><strong>Benutzername:</strong> {user._id}</li>
+        <li><strong>Anrede:</strong> {user.anrede}</li>
+        <li><strong>Name:</strong> {user.vorname} {user.nachname}</li>
+        <li><strong>Geburtstag:</strong> {user.geburtstag}</li>
+        <li><strong>E-Mail:</strong> {user.email}</li>
+      </ul>
+    </section>
 
-  <section class="profile-section">
-    <h5 class="fw-semibold mb-3">🏠 Adresse</h5>
-    <ul class="profile-list">
-      <li><strong>Straße:</strong> {user.adresse.strasse}</li>
-      <li><strong>PLZ / Ort:</strong> {user.adresse.plz} {user.adresse.ort}</li>
-      <li><strong>Land:</strong> {user.adresse.land}</li>
-    </ul>
-  </section>
-</div>
+    <section class="profile-section mb-4">
+      <h5 class="fw-semibold mb-3">🏠 Adresse</h5>
+      <ul class="profile-list">
+        <li><strong>Straße:</strong> {user.adresse.strasse}</li>
+        <li><strong>PLZ / Ort:</strong> {user.adresse.plz} {user.adresse.ort}</li>
+        <li><strong>Land:</strong> {user.adresse.land}</li>
+      </ul>
+    </section>
+
+    <a href="/profile/edit" class="btn btn-primary mt-4 w-10"> Profil bearbeiten</a>
+  </div>
+{/if}
 
 <style>
   .profile-bg {

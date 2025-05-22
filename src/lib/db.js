@@ -299,6 +299,49 @@ async function getDistinctCardRarities() {
   }
 }
 
+//////////////////////////////////////////
+// User-Funktionen
+//////////////////////////////////////////
+
+// Profil abrufen
+async function getUserById(userId) {
+  const collection = db.collection("users");
+  let user = null;
+  try {
+    user = await collection.findOne({ _id: userId });
+  } catch (error) {
+    console.error("getUserById error:", error);
+  }
+  return user;
+}
+
+// Profil aktualisieren
+async function updateUser(userId, userData) {
+  const collection = db.collection("users");
+  try {
+    const result = await collection.updateOne(
+      { _id: userId },
+      { $set: userData }
+    );
+    return result;
+  } catch (error) {
+    console.error("updateUser error:", error);
+    return null;
+  }
+}
+
+// Profil erstellen
+async function createUser(userData) {
+  const collection = db.collection("users");
+  try {
+    const result = await collection.insertOne(userData);
+    return result.insertedId.toString();
+  } catch (error) {
+    console.error("createUser error:", error);
+    return null;
+  }
+}
+
 
 // Exportiere die Funktionen
 export default {
@@ -319,7 +362,10 @@ export default {
   getDistinctLanguages,
   getDistinctNames,
   getDistinctCardsPerPack,
-   getDistinctCardSets,
+  getDistinctCardSets,
   getDistinctCardTypes,
-  getDistinctCardRarities
+  getDistinctCardRarities,
+  getUserById,
+  updateUser,
+  createUser
 };
