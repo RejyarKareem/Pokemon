@@ -1,6 +1,3 @@
-// src/routes/pokedex/+page.server.js
-
-/** @type {import('./$types').PageServerLoad} */
 export async function load() {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
   const data = await res.json();

@@ -1,14 +1,19 @@
-
 export async function load({ params }) {
+  // Name des Pokémons aus der URL extrahieren (z. B. /pokedex/pikachu)
   const name = params.name;
 
+  // Anfrage an die PokéAPI für das gewünschte Pokémon
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+
+  // Falls die Anfrage fehlschlägt, wird ein leeres Ergebnis zurückgegeben
   if (!res.ok) {
     return { pokemon: null };
   }
 
+  // Antwortdaten im JSON-Format parsen
   const data = await res.json();
 
+  // Rückgabe eines vereinfachten Pokémon-Objekts an die Svelte-Seite
   return {
     pokemon: {
       id: data.id,

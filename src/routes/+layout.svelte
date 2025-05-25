@@ -2,8 +2,11 @@
   import { page } from "$app/stores";
 </script>
 
+<!-- Bootstrap Navbar im Dark-Theme -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
+
+    <!-- Logo und Titel -->
     <img
       src="/images/pokemon-tcg-logo.avif"
       alt="Logo"
@@ -12,6 +15,7 @@
     />
     <a class="navbar-brand fw-bold" href="/">Pokémon Boosterwelt</a>
 
+    <!-- Responsive Toggler (für kleine Bildschirme) -->
     <button
       class="navbar-toggler"
       type="button"
@@ -22,8 +26,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Navigationslinks -->
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <!-- Standardseiten -->
         <li class="nav-item">
           <a class="nav-link" href="/">Startseite</a>
         </li>
@@ -46,8 +53,9 @@
           <a class="nav-link" href="/boosterpacks/open">Pack öffnen</a>
         </li>
 
+        <!-- Dropdown-Menü für Profilfunktionen -->
         <li class="nav-item dropdown">
-          <!-- svelte-ignore a11y_invalid_attribute -->
+          <!-- svelte-ignore a11y_invalid_attribute verhindert Warnung für "#" als href -->
           <a
             class="nav-link dropdown-toggle d-flex align-items-center"
             href="#"
@@ -73,20 +81,14 @@
               <a class="dropdown-item" href="/profile">Mein Profil</a>
             </li>
             <li>
-              <a class="dropdown-item" href="/profile/new"
-                >Neues Profil anlegen</a
-              >
+              <a class="dropdown-item" href="/profile/new">Neues Profil anlegen</a>
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li>
-              <a class="dropdown-item" href="/contact/submissions"
-                >Eingereichte Kontaktformulare</a
-              >
+              <a class="dropdown-item" href="/contact/submissions">Eingereichte Kontaktformulare</a>
             </li>
             <li>
-              <a class="dropdown-item" href="/psa_grading/submissions"
-                >Eingesendete PSA-Gradings</a
-              >
+              <a class="dropdown-item" href="/psa_grading/submissions">Eingesendete PSA-Gradings</a>
             </li>
           </ul>
         </li>

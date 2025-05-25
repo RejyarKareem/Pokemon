@@ -1,11 +1,14 @@
-import db from '$lib/db.js';
+import db from '$lib/db.js'; // Import der Datenbankfunktionen
 
 export const actions = {
+  // Standardaktion zum Verarbeiten des Formulars
   default: async ({ request }) => {
+    // Formulardaten auslesen und in ein Objekt umwandeln
     const formData = Object.fromEntries(await request.formData());
 
+    // Strukturierung der empfangenen Daten in ein Benutzerprofil
     const userData = {
-      _id: formData.username,
+      _id: formData.username, // gleichzeitige Verwendung als Primärschlüssel
       username: formData.username,
       anrede: formData.anrede,
       vorname: formData.vorname,
@@ -20,9 +23,10 @@ export const actions = {
       }
     };
 
+    // Speichern des neuen Profils in der Datenbank
     await db.createUser(userData);
 
+    // Rückmeldung an das Frontend bei Erfolg
     return { success: true };
   }
-  
 };

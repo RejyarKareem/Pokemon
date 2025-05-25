@@ -10,7 +10,7 @@ export const actions = {
   default: async () => {
     const allCards = await db.getAllCards();
 
-    // Simuliere 10 zufällige Karten
+    // Simuliere 3 zufällige Karten
     const drawn = [];
     const usedIndexes = new Set();
 

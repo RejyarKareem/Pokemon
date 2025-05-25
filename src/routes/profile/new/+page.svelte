@@ -2,12 +2,18 @@
   let { form } = $props();
 </script>
 
+<!-- Seite mit Hintergrundfarbe und zentriertem Formularlayout -->
 <div class="profile-bg d-flex justify-content-center align-items-start py-5 px-3 px-md-5">
   <div class="form-wrapper text-white w-100">
+
+    <!-- Überschrift -->
     <h1 class="display-5 fw-bold text-center mb-4">Neues Profil anlegen</h1>
 
-    <!-- svelte-ignore a11y_label_has_associated_control -->
+    <!-- Formular zur Erstellung eines neuen Profils -->
+    <!-- svelte-ignore a11y_label_has_associated_control unterdrückt eine Barrierefreiheitswarnung -->
     <form method="POST" class="profile-section bg-light text-dark mx-auto">
+
+      <!-- Abschnitt: Benutzerdaten -->
       <h5 class="fw-semibold mb-3">👤 Benutzerdaten</h5>
 
       <div class="mb-3">
@@ -40,6 +46,7 @@
         <input name="email" type="email" class="form-control" />
       </div>
 
+      <!-- Abschnitt: Adresse -->
       <h5 class="fw-semibold mb-3 mt-4">🏠 Adresse</h5>
 
       <div class="mb-3">
@@ -62,8 +69,10 @@
         <input name="land" class="form-control" />
       </div>
 
+      <!-- Absende-Button -->
       <button class="btn btn-success w-100 mt-3" type="submit">➕ Profil erstellen</button>
 
+      <!-- Erfolgsnachricht bei erfolgreicher Erstellung -->
       {#if form?.success}
         <p class="text-success mt-3 text-center">Profil erfolgreich erstellt ✅</p>
       {/if}
@@ -72,16 +81,19 @@
 </div>
 
 <style>
+  /* Seitenhintergrund mit Farbverlauf */
   .profile-bg {
     background: linear-gradient(135deg, #ffcb05, #3b4cca);
     min-height: 100vh;
   }
 
+  /* Maximalbreite des Formularcontainers */
   .form-wrapper {
     max-width: 700px;
     width: 100%;
   }
 
+  /* Styling für das Formularfeld */
   .profile-section {
     background-color: rgba(255, 255, 255, 0.98);
     padding: 2rem;

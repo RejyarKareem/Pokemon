@@ -1,5 +1,3 @@
-// src/routes/cards/+page.server.js
-// Action zum Erstellen einer neuen Pokémon-Karte
 import db from '$lib/db.js';
 import fs from 'fs/promises';           // Dateisystem-API für Promise-basierte Dateioperationen
 import path from 'path';                // Modul zur Pfadmanipulation

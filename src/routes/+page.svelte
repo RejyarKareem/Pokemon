@@ -2,14 +2,21 @@
   class="homepage-bg text-white d-flex align-items-center justify-content-center"
 >
   <div class="container text-center py-5">
-    <!-- Logo oben zentriert und vergrößert -->
+
+    <!-- Eingebettetes Video (z. B. Pokémon-Themesong) als visuelles Intro -->
     <div class="image-container mb-5">
       <div class="video-wrapper">
-        <video src="/videos/pokemon_theme.mp4" autoplay loop muted playsinline
+        <video
+          src="/videos/pokemon_theme.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
         ></video>
       </div>
     </div>
 
+    <!-- Begrüßung und Einleitung -->
     <h1 class="display-2 fw-bold mb-4">
       Willkommen in der Pokémon Boosterwelt
     </h1>
@@ -19,6 +26,7 @@
       Neue Karten werden laufend hinzugefügt – perfekt für Fans und Sammler!
     </p>
 
+    <!-- Abbildung eines Boosterpacks -->
     <div class="image-container mb-5">
       <img
         src="/images/boosterpack.jpg"
@@ -28,6 +36,7 @@
       />
     </div>
 
+    <!-- Call-to-Action-Buttons zur Navigation -->
     <div class="d-flex justify-content-center gap-4">
       <a href="/boosterpacks" class="btn btn-lg btn-warning px-5 shadow-sm">
         Boosterpacks ansehen
@@ -40,6 +49,7 @@
 </div>
 
 <style>
+  /* Videorahmen mit Seitenverhältnis und Schatten */
   .video-wrapper {
     width: 100%;
     max-width: 500px;
@@ -56,21 +66,19 @@
     display: block;
   }
 
+  /* Zentrierte Bildcontainer */
   .image-container {
     display: flex;
     justify-content: center;
   }
 
+  /* Hintergrunddesign für die Startseite */
   .homepage-bg {
     background: linear-gradient(135deg, #ffcb05, #3b4cca);
     min-height: 100vh;
   }
 
-  .image-container {
-    display: flex;
-    justify-content: center;
-  }
-
+  /* Button-Animation bei Hover */
   .btn {
     transition: all 0.3s ease-in-out;
   }
