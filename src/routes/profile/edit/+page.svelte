@@ -9,7 +9,7 @@
   <h1 class="mb-4 fw-bold">Profil bearbeiten</h1>
 
   <!-- Formular zur Bearbeitung des Benutzerprofils -->
-  <!-- svelte-ignore a11y_label_has_associated_control wird verwendet, um Lint-Warnung zu unterdrücken -->
+  <!-- svelte-ignore a11y_label_has_associated_control wird verwendet, um Lint_Warnung zu unterdrücken -->
   <form method="POST" class="row g-3">
 
     <!-- Persönliche Angaben -->

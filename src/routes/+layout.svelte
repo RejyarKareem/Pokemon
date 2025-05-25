@@ -1,5 +1,6 @@
 <script>
-  import { page } from "$app/stores";
+  import { page } from "$app/state";
+  let { children } = $props();
 </script>
 
 <!-- Bootstrap Navbar im Dark-Theme -->
@@ -97,4 +98,4 @@
   </div>
 </nav>
 
-<slot />
+{@render children?.()}

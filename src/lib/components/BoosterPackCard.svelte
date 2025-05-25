@@ -1,6 +1,11 @@
 <script lang="ts">
-  // Der Boosterpack wird als Prop übergeben
-  export let pack;
+  
+  interface Props {
+    // Der Boosterpack wird als Prop übergeben
+    pack: any;
+  }
+
+  let { pack }: Props = $props();
 </script>
 
 <!-- card h-100 sorgt dafür, dass alle Cards gleich hoch sind -->

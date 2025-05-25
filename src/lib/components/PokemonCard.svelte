@@ -1,6 +1,11 @@
 <script lang="ts">
-  // Die Karte wird als Prop übergeben
-  export let card;
+  
+  interface Props {
+    // Die Karte wird als Prop übergeben
+    card: any;
+  }
+
+  let { card }: Props = $props();
 </script>
 
 <!-- Bootstrap-Card für jede Pokémon-Karte -->
