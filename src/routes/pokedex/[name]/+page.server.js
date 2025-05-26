@@ -1,5 +1,5 @@
 export async function load({ params }) {
-  // Name des Pokémons aus der URL extrahieren (z. B. /pokedex/pikachu)
+  // Name des Pokémons aus der URL extrahieren
   const name = params.name;
 
   // Anfrage an die PokéAPI für das gewünschte Pokémon
