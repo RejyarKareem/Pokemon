@@ -95,7 +95,7 @@ async function getDistinctLanguages() {
   const collection = db.collection('boosterpacks');
   let languages = [];
   try {
-    languages = await collection.distinct('language');
+    languages = await collection.distinct('language'); // Alle einzigartigen Werte im Feld "language" abrufen
   } catch (error) {
     console.error('getDistinctLanguages error:', error);
   }
@@ -106,7 +106,7 @@ async function getDistinctNames() {
   const collection = db.collection('boosterpacks');
   let names = [];
   try {
-    names = await collection.distinct('name');
+    names = await collection.distinct('name'); // Alle einzigartigen Werte im Feld "name" abrufen
   } catch (error) {
     console.error('getDistinctNames error:', error);
   }
@@ -117,7 +117,7 @@ async function getDistinctCardsPerPack() {
   const collection = db.collection('boosterpacks');
   let options = [];
   try {
-    options = await collection.distinct('cards_per_pack');
+    options = await collection.distinct('cards_per_pack'); // Alle einzigartigen Werte im Feld "cards_per_pack" abrufen
   } catch (error) {
     console.error('getDistinctCardsPerPack error:', error);
   }
@@ -269,10 +269,11 @@ async function createPSAGradingSubmission(gradingData) {
   }
 }
 
+/* Distinct-Funktionen für Filteroptionen */
 async function getDistinctCardSets() {
   const collection = db.collection("cards");
   try {
-    return await collection.distinct("set");
+    return await collection.distinct("set"); // Alle einzigartigen Werte im Feld "set" abrufen
   } catch (error) {
     console.error("getDistinctCardSets error:", error);
     return [];
@@ -282,7 +283,7 @@ async function getDistinctCardSets() {
 async function getDistinctCardTypes() {
   const collection = db.collection("cards");
   try {
-    return await collection.distinct("type");
+    return await collection.distinct("type"); // Alle einzigartigen Werte im Feld "type" abrufen
   } catch (error) {
     console.error("getDistinctCardTypes error:", error);
     return [];
@@ -292,7 +293,7 @@ async function getDistinctCardTypes() {
 async function getDistinctCardRarities() {
   const collection = db.collection("cards");
   try {
-    return await collection.distinct("rarity");
+    return await collection.distinct("rarity"); // Alle einzigartigen Werte im Feld "rarity" abrufen
   } catch (error) {
     console.error("getDistinctCardRarities error:", error);
     return [];
