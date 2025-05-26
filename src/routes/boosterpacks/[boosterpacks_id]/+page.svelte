@@ -4,7 +4,9 @@
 </script>
 
 <!-- Wrapper mit Farbverlauf und zentriertem Haupt-Container -->
-<div class="detail-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="detail-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5">
     <!-- Boosterpack-Name als Seitentitel -->
     <h1 class="display-4 fw-bold text-center mb-5">{pack.name}</h1>
@@ -14,10 +16,10 @@
       <div class="col-md-6 mb-4 text-center">
         {#each pack.poster as img}
           <img
-            src={img}                    
-            alt={pack.name}             
+            src={img}
+            alt={pack.name}
             class="img-fluid rounded shadow mb-3"
-            style="max-height: 300px; object-fit: cover;" 
+            style="max-height: 300px; object-fit: cover;"
           />
         {/each}
       </div>
@@ -26,23 +28,32 @@
       <div class="col-md-6">
         <ul class="list-group bg-light text-dark mb-4">
           <li class="list-group-item">
-            <strong>Sprache:</strong> {pack.language}  <!-- Anzeigen der Sprache -->
+            <strong>Sprache:</strong>
+            {pack.language}
+            <!-- Anzeigen der Sprache -->
           </li>
           <li class="list-group-item">
-            <strong>Karten pro Pack:</strong> {pack.cards_per_pack}  <!-- Kartenanzahl -->
+            <strong>Karten pro Pack:</strong>
+            {pack.cards_per_pack}
+            <!-- Kartenanzahl -->
           </li>
           <li class="list-group-item">
-            <strong>Inhalt:</strong> {pack.content}  <!-- Inhalt Beschreibung -->
+            <strong>Inhalt:</strong>
+            {pack.content}
+            <!-- Inhalt Beschreibung -->
           </li>
           <li class="list-group-item">
-            <strong>Altersempfehlung:</strong> {pack.age_recommendation}  <!-- Altersempfehlung -->
+            <strong>Altersempfehlung:</strong>
+            {pack.age_recommendation}
+            <!-- Altersempfehlung -->
           </li>
         </ul>
 
         <!-- Produktdetails-Block mit Beschreibungstext -->
         <div class="bg-light text-dark p-4 rounded shadow-sm mb-4">
           <h5 class="mb-3">Produktdetails</h5>
-          <p class="mb-0">{pack.product_details.description}</p>  <!-- Detailtext -->
+          <p class="mb-0">{pack.product_details.description}</p>
+          <!-- Detailtext -->
         </div>
 
         <!-- Button-Gruppe: Bearbeiten, Zurück und Löschen -->
@@ -56,10 +67,7 @@
           </a>
 
           <!-- Link zurück zur Übersicht -->
-          <a
-            href="/boosterpacks"
-            class="btn btn-warning btn-lg px-4 shadow-sm"
-          >
+          <a href="/boosterpacks" class="btn btn-warning btn-lg px-4 shadow-sm">
             ← Zurück zur Übersicht
           </a>
 
@@ -69,11 +77,13 @@
               type="submit"
               class="btn btn-danger btn-lg px-4 shadow-sm"
               onclick={(e) => {
-                e.preventDefault();  // verhindert direkten Submit
-                if (confirm('Möchtest du dieses Boosterpack wirklich löschen?')) {
+                e.preventDefault(); // verhindert direkten Submit
+                if (
+                  confirm("Möchtest du dieses Boosterpack wirklich löschen?")
+                ) {
                   // Submit nur nach Bestätigung
                   (e.currentTarget as HTMLButtonElement)
-                    .closest('form')!
+                    .closest("form")!
                     .submit();
                 }
               }}
@@ -99,11 +109,20 @@
     min-height: 100vh;
   }
   /* Entfernt Rahmen der List-Group-Items */
-  .list-group-item { border: none; }
+  .list-group-item {
+    border: none;
+  }
   /* Runde Ecken und Schatten für Info-Box */
-  .list-group { border-radius: .5rem; overflow: hidden; }
-  .bg-light { background-color: #f8f9fa !important; }
-  .text-dark { color: #212529 !important; }
+  .list-group {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  .text-dark {
+    color: #212529 !important;
+  }
 
   /* Hover-Effekt für Buttons */
   a.btn,

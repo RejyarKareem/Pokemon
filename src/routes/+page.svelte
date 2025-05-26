@@ -2,16 +2,10 @@
   class="homepage-bg text-white d-flex align-items-center justify-content-center"
 >
   <div class="container text-center py-5">
-
     <!-- Eingebettetes Video als visuelles Intro -->
     <div class="image-container mb-5">
       <div class="video-wrapper">
-        <video
-          src="/videos/pokemon_theme.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
+        <video src="/videos/pokemon_theme.mp4" autoplay loop muted playsinline
         ></video>
       </div>
     </div>

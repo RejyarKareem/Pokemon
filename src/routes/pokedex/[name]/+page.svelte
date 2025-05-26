@@ -9,8 +9,9 @@
   <p class="text-white text-center mt-5">Pokémon nicht gefunden ❌</p>
 {:else}
   <!-- Detailansicht des gefundenen Pokémons -->
-  <div class="detail-bg text-white d-flex flex-column align-items-center py-5 px-4">
-
+  <div
+    class="detail-bg text-white d-flex flex-column align-items-center py-5 px-4"
+  >
     <!-- Titelzeile mit ID und Name -->
     <h1 class="display-4 fw-bold text-center mb-4 text-capitalize">
       #{pokemon.id} – {pokemon.name}
@@ -41,7 +42,9 @@
       <h5 class="mb-3">🧬 Basiswerte</h5>
       <ul class="list-group">
         {#each pokemon.stats as stat}
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
             <span class="text-capitalize">{stat.name}</span>
             <span class="badge bg-secondary">{stat.value}</span>
           </li>

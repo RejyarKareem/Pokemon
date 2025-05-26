@@ -1,11 +1,11 @@
-import db from '$lib/db.js';
+import db from "$lib/db.js";
 
 export async function load({ url }) {
   // Filter-Parameter auslesen
-  const language = url.searchParams.get('language');
-  const name = url.searchParams.get('name');
-  const cardsPerPack = url.searchParams.get('cards_per_pack');
-  const sort = url.searchParams.get('sort');
+  const language = url.searchParams.get("language");
+  const name = url.searchParams.get("name");
+  const cardsPerPack = url.searchParams.get("cards_per_pack");
+  const sort = url.searchParams.get("sort");
 
   // Filterobjekt aufbauen
   const filter = {};
@@ -21,7 +21,7 @@ export async function load({ url }) {
     name_desc: { name: -1 },
     language: { language: 1 },
     cards_asc: { cards_per_pack: 1 },
-    cards_desc: { cards_per_pack: -1 }
+    cards_desc: { cards_per_pack: -1 },
   };
   const sortQuery = sortOptions[sort] ?? {};
 
@@ -39,7 +39,7 @@ export async function load({ url }) {
     filters: {
       languages,
       names,
-      cardsPerPackOptions
-    }
+      cardsPerPackOptions,
+    },
   };
 }

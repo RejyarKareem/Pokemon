@@ -1,12 +1,12 @@
-import db from '$lib/db.js'; // Import der Datenbankfunktionen
+import db from "$lib/db.js"; // Import der Datenbankfunktionen
 
 export async function load({ url }) {
   // Auslesen der Suchparameter aus der URL
-  const set = url.searchParams.get('set');       // z.B. Karten-Edition
-  const type = url.searchParams.get('type');     // z.B. Feuer, Wasser, etc.
-  const rarity = url.searchParams.get('rarity'); // z.B. Seltenheit der Karte
-  const hpMin = url.searchParams.get('hp');      // Mindest-HP-Wert
-  const sort = url.searchParams.get('sort');     // Sortierkriterium
+  const set = url.searchParams.get("set"); // z.B. Karten-Edition
+  const type = url.searchParams.get("type"); // z.B. Feuer, Wasser, etc.
+  const rarity = url.searchParams.get("rarity"); // z.B. Seltenheit der Karte
+  const hpMin = url.searchParams.get("hp"); // Mindest-HP-Wert
+  const sort = url.searchParams.get("sort"); // Sortierkriterium
 
   // Aufbau des Filterobjekts für die MongoDB-Abfrage
   const filter = {};
@@ -21,11 +21,11 @@ export async function load({ url }) {
 
   // Mögliche Sortieroptionen
   const sortOptions = {
-    name_asc: { name: 1 },       // Name aufsteigend
-    name_desc: { name: -1 },     // Name absteigend
-    hp_asc: { hp: 1 },           // HP aufsteigend
-    hp_desc: { hp: -1 },         // HP absteigend
-    rarity: { rarity: 1 }        // Seltenheit alphabetisch
+    name_asc: { name: 1 }, // Name aufsteigend
+    name_desc: { name: -1 }, // Name absteigend
+    hp_asc: { hp: 1 }, // HP aufsteigend
+    hp_desc: { hp: -1 }, // HP absteigend
+    rarity: { rarity: 1 }, // Seltenheit alphabetisch
   };
 
   // Wenn kein gültiger Sortierwert angegeben ist, bleibt sortQuery leer
@@ -45,7 +45,7 @@ export async function load({ url }) {
     filters: {
       sets,
       types,
-      rarities
-    }
+      rarities,
+    },
   };
 }

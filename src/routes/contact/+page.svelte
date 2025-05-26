@@ -3,19 +3,25 @@
 </script>
 
 <!-- Hauptbereich mit Hintergrund und zentriertem Layout -->
-<div class="contact-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="contact-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5" style="max-width: 600px;">
-
     <!-- Überschrift und Einleitungstext -->
     <h1 class="display-4 fw-bold text-center mb-4">Kontaktiere uns</h1>
     <p class="lead mb-5">
-      Du hast Fragen zu Boosterpacks, Pokémon-Karten oder möchtest einfach Hallo sagen?<br />
+      Du hast Fragen zu Boosterpacks, Pokémon-Karten oder möchtest einfach Hallo
+      sagen?<br />
       Dann schreib uns – wir freuen uns auf deine Nachricht!
     </p>
 
     <!-- Kontaktformular mit POST-Methode, Aktion verweist auf "create"-Action -->
-    <form method="POST" action="?/create" class="mx-auto" style="max-width: 600px;">
-
+    <form
+      method="POST"
+      action="?/create"
+      class="mx-auto"
+      style="max-width: 600px;"
+    >
       <!-- Eingabefeld: Name -->
       <div class="mb-3 text-start">
         <label for="name" class="form-label">Name</label>
@@ -68,7 +74,9 @@
       <p class="mt-3 text-danger">{form.error}</p>
     {/if}
     {#if form?.success}
-      <p class="mt-3 text-success">Deine Nachricht wurde erfolgreich gesendet!</p>
+      <p class="mt-3 text-success">
+        Deine Nachricht wurde erfolgreich gesendet!
+      </p>
     {/if}
   </div>
 </div>

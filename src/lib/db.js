@@ -15,7 +15,7 @@ async function getAllBoosterpacks(filter = {}, sort = {}) {
   let packs = [];
   try {
     packs = await collection.find(filter).sort(sort).toArray();
-    packs.forEach(pack => {
+    packs.forEach((pack) => {
       pack._id = pack._id.toString();
     });
   } catch (error) {
@@ -24,7 +24,7 @@ async function getAllBoosterpacks(filter = {}, sort = {}) {
   return packs;
 }
 
- /* Einzelnes Boosterpack per ID abrufen */
+/* Einzelnes Boosterpack per ID abrufen */
 async function getBoosterpackById(id) {
   const collection = db.collection("boosterpacks");
   let pack = null;
@@ -92,34 +92,34 @@ async function deleteBoosterpack(id) {
 
 /* Distinct-Funktionen für Filteroptionen */
 async function getDistinctLanguages() {
-  const collection = db.collection('boosterpacks');
+  const collection = db.collection("boosterpacks");
   let languages = [];
   try {
-    languages = await collection.distinct('language'); // Alle einzigartigen Werte im Feld "language" abrufen
+    languages = await collection.distinct("language"); // Alle einzigartigen Werte im Feld "language" abrufen
   } catch (error) {
-    console.error('getDistinctLanguages error:', error);
+    console.error("getDistinctLanguages error:", error);
   }
   return languages;
 }
 
 async function getDistinctNames() {
-  const collection = db.collection('boosterpacks');
+  const collection = db.collection("boosterpacks");
   let names = [];
   try {
-    names = await collection.distinct('name'); // Alle einzigartigen Werte im Feld "name" abrufen
+    names = await collection.distinct("name"); // Alle einzigartigen Werte im Feld "name" abrufen
   } catch (error) {
-    console.error('getDistinctNames error:', error);
+    console.error("getDistinctNames error:", error);
   }
   return names;
 }
 
 async function getDistinctCardsPerPack() {
-  const collection = db.collection('boosterpacks');
+  const collection = db.collection("boosterpacks");
   let options = [];
   try {
-    options = await collection.distinct('cards_per_pack'); // Alle einzigartigen Werte im Feld "cards_per_pack" abrufen
+    options = await collection.distinct("cards_per_pack"); // Alle einzigartigen Werte im Feld "cards_per_pack" abrufen
   } catch (error) {
-    console.error('getDistinctCardsPerPack error:', error);
+    console.error("getDistinctCardsPerPack error:", error);
   }
   return options;
 }
@@ -133,7 +133,7 @@ async function getAllCards(filter = {}, sort = {}) {
   let cards = [];
   try {
     cards = await collection.find(filter).sort(sort).toArray();
-    cards.forEach(card => {
+    cards.forEach((card) => {
       card._id = card._id.toString();
     });
   } catch (error) {
@@ -214,7 +214,7 @@ async function getAllContactSubmissions() {
   let subs = [];
   try {
     subs = await collection.find({}).toArray();
-    subs.forEach(sub => {
+    subs.forEach((sub) => {
       sub._id = sub._id.toString();
       if (sub.createdAt) {
         sub.createdAt = new Date(sub.createdAt).toISOString();
@@ -246,7 +246,7 @@ async function getAllPSAGradingSubmissions() {
   let subs = [];
   try {
     subs = await collection.find({}).toArray();
-    subs.forEach(sub => {
+    subs.forEach((sub) => {
       sub._id = sub._id.toString();
       if (sub.createdAt) sub.createdAt = new Date(sub.createdAt).toISOString();
     });
@@ -343,7 +343,6 @@ async function createUser(userData) {
   }
 }
 
-
 // Exportiere die Funktionen
 export default {
   getAllBoosterpacks,
@@ -368,5 +367,5 @@ export default {
   getDistinctCardRarities,
   getUserById,
   updateUser,
-  createUser
+  createUser,
 };

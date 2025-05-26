@@ -4,7 +4,9 @@
 </script>
 
 <!-- Haupt-Wrapper mit Farbverlauf und zentriertem Inhalt -->
-<div class="detail-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="detail-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5" style="max-width: 600px;">
     <!-- Zurück-Knopf zur Kartenübersicht -->
     <div class="mb-4">
@@ -26,7 +28,7 @@
           name="name"
           class="form-control"
           required
-          value={card.name} 
+          value={card.name}
         />
       </div>
 
@@ -38,7 +40,7 @@
           name="set"
           class="form-control"
           required
-          value={card.set} 
+          value={card.set}
         />
       </div>
 
@@ -50,7 +52,7 @@
           name="type"
           class="form-control"
           required
-          value={card.type} 
+          value={card.type}
         />
       </div>
 
@@ -62,7 +64,7 @@
           name="rarity"
           class="form-control"
           required
-          value={card.rarity} 
+          value={card.rarity}
         />
       </div>
 
@@ -75,7 +77,7 @@
           name="hp"
           class="form-control"
           required
-          value={card.hp} 
+          value={card.hp}
         />
       </div>
 
@@ -83,18 +85,20 @@
       <div class="mb-3 text-start">
         <p>Aktuelles Bild:</p>
         <img
-          src={card.poster}       
+          src={card.poster}
           alt={card.name}
           class="img-fluid rounded mb-3"
           style="max-height:200px; object-fit:cover;"
         />
-        <label for="image" class="form-label">Neues Bild auswählen (optional)</label>
+        <label for="image" class="form-label"
+          >Neues Bild auswählen (optional)</label
+        >
         <input
           type="file"
           id="image"
           name="image"
           class="form-control"
-          accept="image/*" 
+          accept="image/*"
         />
       </div>
 
@@ -107,7 +111,7 @@
           class="form-control mb-1"
           placeholder="Name"
           required
-          value={card.attacks[0]?.name} 
+          value={card.attacks[0]?.name}
         />
         <input
           id="attack1Damage"
@@ -115,7 +119,7 @@
           class="form-control"
           placeholder="Schaden"
           required
-          value={card.attacks[0]?.damage} 
+          value={card.attacks[0]?.damage}
         />
       </div>
 
@@ -127,14 +131,14 @@
           name="attack2Name"
           class="form-control mb-1"
           placeholder="Name"
-          value={card.attacks[1]?.name} 
+          value={card.attacks[1]?.name}
         />
         <input
           id="attack2Damage"
           name="attack2Damage"
           class="form-control"
           placeholder="Schaden"
-          value={card.attacks[1]?.damage} 
+          value={card.attacks[1]?.damage}
         />
       </div>
 

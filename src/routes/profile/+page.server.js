@@ -1,6 +1,6 @@
-import db from '$lib/db.js';
+import db from "$lib/db.js";
 
-const userId = 'pokefan'; // Fester Benutzername (vereinfachte Authentifizierung)
+const userId = "pokefan"; // Fester Benutzername (vereinfachte Authentifizierung)
 
 export async function load() {
   // Abruf des Benutzerprofils anhand der Benutzer-ID

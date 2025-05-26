@@ -6,7 +6,6 @@
 <!-- Bootstrap Navbar im Dark-Theme -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-
     <!-- Logo und Titel -->
     <img
       src="/images/pokemon-tcg-logo.avif"
@@ -30,7 +29,6 @@
     <!-- Navigationslinks -->
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
         <!-- Standardseiten -->
         <li class="nav-item">
           <a class="nav-link" href="/">Startseite</a>
@@ -82,14 +80,20 @@
               <a class="dropdown-item" href="/profile">Mein Profil</a>
             </li>
             <li>
-              <a class="dropdown-item" href="/profile/new">Neues Profil anlegen</a>
+              <a class="dropdown-item" href="/profile/new"
+                >Neues Profil anlegen</a
+              >
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li>
-              <a class="dropdown-item" href="/contact/submissions">Eingereichte Kontaktformulare</a>
+              <a class="dropdown-item" href="/contact/submissions"
+                >Eingereichte Kontaktformulare</a
+              >
             </li>
             <li>
-              <a class="dropdown-item" href="/psa_grading/submissions">Eingesendete PSA-Gradings</a>
+              <a class="dropdown-item" href="/psa_grading/submissions"
+                >Eingesendete PSA-Gradings</a
+              >
             </li>
           </ul>
         </li>

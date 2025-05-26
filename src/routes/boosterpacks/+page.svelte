@@ -1,6 +1,6 @@
 <script lang="ts">
   // Import der `enhance`-Funktion von SvelteKit für progressive Formulare
-  import { enhance } from '$app/forms';
+  import { enhance } from "$app/forms";
 
   // Zugriff auf die vom Server geladenen Props (z. B. über load-Funktion)
   let { data } = $props();
@@ -14,25 +14,22 @@
   const cardsOptions: number[] = data.filters.cardsPerPackOptions;
 
   // Import der Komponente zur Darstellung eines einzelnen Boosterpacks
-  import BoosterPackCard from '$lib/components/BoosterPackCard.svelte';
+  import BoosterPackCard from "$lib/components/BoosterPackCard.svelte";
 </script>
 
 <!-- Hauptbereich mit Farbverlauf im Hintergrund -->
 <div class="list-bg text-white d-flex flex-column align-items-center">
   <div class="container py-5">
-
     <!-- Überschrift -->
     <h1 class="display-4 fw-bold text-center mb-5">Unsere Boosterpacks</h1>
 
     <div class="row">
-      
       <!-- Linke Spalte: Filter-Formular -->
       <div class="col-md-3 mb-4">
         <h4 class="fw-bold mb-3">Filtern & Sortieren</h4>
 
         <!-- GET-Formular mit `enhance` für dynamisches Verhalten -->
         <form method="GET" use:enhance class="d-flex flex-column gap-3">
-
           <!-- Filter: Sprache -->
           <select name="language" class="form-select">
             <option value="">Alle Sprachen</option>
@@ -72,7 +69,9 @@
         </form>
 
         <!-- Link zum Hinzufügen eines neuen Boosterpacks -->
-        <a href="/boosterpacks/new" class="btn btn-primary mt-4 w-100">Neues Boosterpack hinzufügen</a>
+        <a href="/boosterpacks/new" class="btn btn-primary mt-4 w-100"
+          >Neues Boosterpack hinzufügen</a
+        >
       </div>
 
       <!-- Rechte Spalte: Anzeige der Boosterpacks -->

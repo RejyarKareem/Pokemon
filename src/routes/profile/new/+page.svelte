@@ -3,16 +3,16 @@
 </script>
 
 <!-- Seite mit Hintergrundfarbe und zentriertem Formularlayout -->
-<div class="profile-bg d-flex justify-content-center align-items-start py-5 px-3 px-md-5">
+<div
+  class="profile-bg d-flex justify-content-center align-items-start py-5 px-3 px-md-5"
+>
   <div class="form-wrapper text-white w-100">
-
     <!-- Überschrift -->
     <h1 class="display-5 fw-bold text-center mb-4">Neues Profil anlegen</h1>
 
     <!-- Formular zur Erstellung eines neuen Profils -->
     <!-- svelte-ignore a11y_label_has_associated_control unterdrückt eine Barrierefreiheitswarnung -->
     <form method="POST" class="profile-section bg-light text-dark mx-auto">
-
       <!-- Abschnitt: Benutzerdaten -->
       <h5 class="fw-semibold mb-3">👤 Benutzerdaten</h5>
 
@@ -70,11 +70,15 @@
       </div>
 
       <!-- Absende-Button -->
-      <button class="btn btn-success w-100 mt-3" type="submit">➕ Profil erstellen</button>
+      <button class="btn btn-success w-100 mt-3" type="submit"
+        >➕ Profil erstellen</button
+      >
 
       <!-- Erfolgsnachricht bei erfolgreicher Erstellung -->
       {#if form?.success}
-        <p class="text-success mt-3 text-center">Profil erfolgreich erstellt ✅</p>
+        <p class="text-success mt-3 text-center">
+          Profil erfolgreich erstellt ✅
+        </p>
       {/if}
     </form>
   </div>

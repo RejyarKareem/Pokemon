@@ -9,8 +9,9 @@
   <p class="text-white px-4 py-5">Kein Profil gefunden 😢</p>
 {:else}
   <!-- Profilansicht bei vorhandenem Benutzerprofil -->
-  <div class="profile-bg text-white d-flex flex-column align-items-start px-4 px-md-5 py-5">
-
+  <div
+    class="profile-bg text-white d-flex flex-column align-items-start px-4 px-md-5 py-5"
+  >
     <!-- Überschrift -->
     <h1 class="display-5 fw-bold mb-4">Mein Profil</h1>
 
@@ -31,13 +32,19 @@
       <h5 class="fw-semibold mb-3">🏠 Adresse</h5>
       <ul class="profile-list">
         <li><strong>Straße:</strong> {user.adresse.strasse}</li>
-        <li><strong>PLZ / Ort:</strong> {user.adresse.plz} {user.adresse.ort}</li>
+        <li>
+          <strong>PLZ / Ort:</strong>
+          {user.adresse.plz}
+          {user.adresse.ort}
+        </li>
         <li><strong>Land:</strong> {user.adresse.land}</li>
       </ul>
     </section>
 
     <!-- Button zur Bearbeitung des Profils -->
-    <a href="/profile/edit" class="btn btn-primary mt-4 w-10">Profil bearbeiten</a>
+    <a href="/profile/edit" class="btn btn-primary mt-4 w-10"
+      >Profil bearbeiten</a
+    >
   </div>
 {/if}
 

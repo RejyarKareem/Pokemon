@@ -3,7 +3,9 @@
 </script>
 
 <!-- Wrapper mit Farbverlauf und zentriertem Container -->
-<div class="detail-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="detail-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5" style="max-width: 600px;">
     <!-- Zurück-Link zur Kartenübersicht -->
     <div class="mb-4">
@@ -13,58 +15,119 @@
     </div>
 
     <!-- Seitenüberschrift -->
-    <h1 class="display-4 fw-bold text-center mb-4">Neue Pokémon-Karte hinzufügen</h1>
+    <h1 class="display-4 fw-bold text-center mb-4">
+      Neue Pokémon-Karte hinzufügen
+    </h1>
 
     <!-- Formular zur Kartenerstellung -->
     <form method="POST" action="?/create" enctype="multipart/form-data">
       <!-- Name-Eingabe -->
       <div class="mb-3 text-start">
         <label for="name" class="form-label">Name</label>
-        <input id="name" name="name" class="form-control" required placeholder="z.B. Pikachu VMAX" />
+        <input
+          id="name"
+          name="name"
+          class="form-control"
+          required
+          placeholder="z.B. Pikachu VMAX"
+        />
       </div>
 
       <!-- Set/Ecke-Eingabe -->
       <div class="mb-3 text-start">
         <label for="set" class="form-label">Set / Edition</label>
-        <input id="set" name="set" class="form-control" required placeholder="z.B. Glänzendes Schicksal" />
+        <input
+          id="set"
+          name="set"
+          class="form-control"
+          required
+          placeholder="z.B. Glänzendes Schicksal"
+        />
       </div>
 
       <!-- Typ-Eingabe -->
       <div class="mb-3 text-start">
         <label for="type" class="form-label">Typ</label>
-        <input id="type" name="type" class="form-control" required placeholder="z.B. Elektro" />
+        <input
+          id="type"
+          name="type"
+          class="form-control"
+          required
+          placeholder="z.B. Elektro"
+        />
       </div>
 
       <!-- Seltenheit-Eingabe -->
       <div class="mb-3 text-start">
         <label for="rarity" class="form-label">Seltenheit</label>
-        <input id="rarity" name="rarity" class="form-control" required placeholder="z.B. Ultra Rare" />
+        <input
+          id="rarity"
+          name="rarity"
+          class="form-control"
+          required
+          placeholder="z.B. Ultra Rare"
+        />
       </div>
 
       <!-- HP-Eingabe als nummer -->
       <div class="mb-3 text-start">
         <label for="hp" class="form-label">HP</label>
-        <input type="number" id="hp" name="hp" class="form-control" required placeholder="z.B. 300" />
+        <input
+          type="number"
+          id="hp"
+          name="hp"
+          class="form-control"
+          required
+          placeholder="z.B. 300"
+        />
       </div>
 
       <!-- Optionaler Bild-Upload -->
       <div class="mb-3 text-start">
         <label for="image" class="form-label">Bild auswählen (optional)</label>
-        <input type="file" id="image" name="image" class="form-control" accept="image/*" />
+        <input
+          type="file"
+          id="image"
+          name="image"
+          class="form-control"
+          accept="image/*"
+        />
       </div>
 
       <!-- Attacke 1 (Pflichtfeld) -->
       <div class="mb-3 text-start">
         <label for="attack1Name" class="form-label">Attacke 1</label>
-        <input id="attack1Name" name="attack1Name" class="form-control mb-1" placeholder="Name" required />
-        <input id="attack1Damage" name="attack1Damage" class="form-control" placeholder="Schaden" required />
+        <input
+          id="attack1Name"
+          name="attack1Name"
+          class="form-control mb-1"
+          placeholder="Name"
+          required
+        />
+        <input
+          id="attack1Damage"
+          name="attack1Damage"
+          class="form-control"
+          placeholder="Schaden"
+          required
+        />
       </div>
 
       <!-- Attacke 2 (optional) -->
       <div class="mb-3 text-start">
         <label for="attack2Name" class="form-label">Attacke 2 (optional)</label>
-        <input id="attack2Name" name="attack2Name" class="form-control mb-1" placeholder="Name" />
-        <input id="attack2Damage" name="attack2Damage" class="form-control" placeholder="Schaden" />
+        <input
+          id="attack2Name"
+          name="attack2Name"
+          class="form-control mb-1"
+          placeholder="Name"
+        />
+        <input
+          id="attack2Damage"
+          name="attack2Damage"
+          class="form-control"
+          placeholder="Schaden"
+        />
       </div>
 
       <!-- Submit-Button -->

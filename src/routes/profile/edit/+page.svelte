@@ -11,7 +11,6 @@
   <!-- Formular zur Bearbeitung des Benutzerprofils -->
   <!-- svelte-ignore a11y_label_has_associated_control wird verwendet, um Lint_Warnung zu unterdrücken -->
   <form method="POST" class="row g-3">
-
     <!-- Persönliche Angaben -->
     <div class="col-md-2">
       <label class="form-label">Anrede</label>
@@ -29,7 +28,12 @@
     <!-- Kontakt- und Geburtsdaten -->
     <div class="col-md-6">
       <label class="form-label">Geburtstag</label>
-      <input type="date" name="geburtstag" value={user.geburtstag} class="form-control" />
+      <input
+        type="date"
+        name="geburtstag"
+        value={user.geburtstag}
+        class="form-control"
+      />
     </div>
     <div class="col-md-6">
       <label class="form-label">E-Mail</label>
@@ -39,7 +43,11 @@
     <!-- Adresse -->
     <div class="col-12">
       <label class="form-label">Straße</label>
-      <input name="strasse" value={user.adresse?.strasse} class="form-control" />
+      <input
+        name="strasse"
+        value={user.adresse?.strasse}
+        class="form-control"
+      />
     </div>
     <div class="col-md-4">
       <label class="form-label">PLZ</label>

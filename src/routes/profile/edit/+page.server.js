@@ -1,8 +1,8 @@
-import db from '$lib/db.js'; // Import der Datenbankfunktionen
-import { redirect } from '@sveltejs/kit'; // Für Weiterleitung nach dem Speichern
+import db from "$lib/db.js"; // Import der Datenbankfunktionen
+import { redirect } from "@sveltejs/kit"; // Für Weiterleitung nach dem Speichern
 
 // Fester Benutzername (simuliertes Login)
-const userId = 'pokefan';
+const userId = "pokefan";
 
 // Ladefunktion für die Seite
 export async function load() {
@@ -32,14 +32,14 @@ export const actions = {
         strasse: formData.strasse,
         plz: formData.plz,
         ort: formData.ort,
-        land: formData.land
-      }
+        land: formData.land,
+      },
     };
 
     // Aktualisieren des Benutzers in der Datenbank
     await db.updateUser(userId, userData);
 
     // Nach erfolgreicher Speicherung Umleitung zur Profilseite
-    throw redirect(303, '/profile');
-  }
+    throw redirect(303, "/profile");
+  },
 };

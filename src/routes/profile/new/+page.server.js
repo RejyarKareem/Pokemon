@@ -1,4 +1,4 @@
-import db from '$lib/db.js';
+import db from "$lib/db.js";
 
 export const actions = {
   // Standardaktion zum Verarbeiten des Formulars
@@ -19,8 +19,8 @@ export const actions = {
         strasse: formData.strasse,
         plz: formData.plz,
         ort: formData.ort,
-        land: formData.land
-      }
+        land: formData.land,
+      },
     };
 
     // Speichern des neuen Profils in der Datenbank
@@ -28,5 +28,5 @@ export const actions = {
 
     // Rückmeldung an das Frontend bei Erfolg
     return { success: true };
-  }
+  },
 };

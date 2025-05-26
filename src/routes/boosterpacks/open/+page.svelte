@@ -6,14 +6,15 @@
   const drawnCards = form?.cards || [];
 
   // Import der Komponente zur Darstellung einzelner Pokémon-Karten
-  import PokemonCard from '$lib/components/PokemonCard.svelte';
+  import PokemonCard from "$lib/components/PokemonCard.svelte";
 </script>
 
 <!-- Haupt-Container mit Hintergrund und vertikaler Ausrichtung -->
-<div class="booster-bg text-white d-flex flex-column align-items-center px-4 py-5">
-  
+<div
+  class="booster-bg text-white d-flex flex-column align-items-center px-4 py-5"
+>
   <!-- Überschrift der Seite -->
-  <h1 class="display-4 fw-bold mb-4 text-center">Boosterpack öffnen </h1>
+  <h1 class="display-4 fw-bold mb-4 text-center">Boosterpack öffnen</h1>
 
   <!-- Formular zum Öffnen eines Boosterpacks (POST-Anfrage beim Absenden) -->
   <form method="POST" class="text-center mb-5">
@@ -31,7 +32,8 @@
       {#each drawnCards as card (card._id)}
         <!-- Jede Karte wird in einer Spalte dargestellt -->
         <div class="col-md-4">
-          <PokemonCard {card} /> <!-- Verwendung der Karten-Komponente -->
+          <PokemonCard {card} />
+          <!-- Verwendung der Karten-Komponente -->
         </div>
       {/each}
     </div>
@@ -41,7 +43,11 @@
 <style>
   /* Hintergrund-Design mit Farbverlauf und voller Höhe */
   .booster-bg {
-    background: linear-gradient(135deg, #ffcb05, #3b4cca); /* gelb-blauer Verlauf */
+    background: linear-gradient(
+      135deg,
+      #ffcb05,
+      #3b4cca
+    ); /* gelb-blauer Verlauf */
     min-height: 100vh; /* mindestens die volle Höhe des Bildschirms */
     width: 100%;
   }

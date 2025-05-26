@@ -4,7 +4,9 @@
 </script>
 
 <!-- Hintergrund mit Farbverlauf und zentrierter Ausrichtung -->
-<div class="detail-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="detail-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5" style="max-width: 600px;">
     <!-- Button zum Zurückkehren zur Übersichtseite -->
     <div class="mb-4">
@@ -14,7 +16,9 @@
     </div>
 
     <!-- Seitenüberschrift -->
-    <h1 class="display-4 fw-bold text-center mb-4">Neues Boosterpack hinzufügen</h1>
+    <h1 class="display-4 fw-bold text-center mb-4">
+      Neues Boosterpack hinzufügen
+    </h1>
 
     <!-- Formular zum Erstellen eines neuen Boosterpacks -->
     <form method="POST" action="?/create" enctype="multipart/form-data">
@@ -69,7 +73,9 @@
 
       <!-- Eingabefeld: Altersempfehlung -->
       <div class="mb-3 text-start">
-        <label for="age_recommendation" class="form-label">Altersempfehlung</label>
+        <label for="age_recommendation" class="form-label"
+          >Altersempfehlung</label
+        >
         <input
           id="age_recommendation"
           name="age_recommendation"

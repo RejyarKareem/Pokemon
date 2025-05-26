@@ -3,34 +3,63 @@
 </script>
 
 <!-- Hintergrundcontainer mit Farbverlauf und zentriertem Layout -->
-<div class="grading-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="grading-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container text-center py-5" style="max-width: 700px;">
-
     <!-- Überschrift und Einleitung -->
-    <h1 class="display-4 fw-bold mb-4">PSA Grading – Deine Karte bewerten lassen</h1>
+    <h1 class="display-4 fw-bold mb-4">
+      PSA Grading – Deine Karte bewerten lassen
+    </h1>
     <p class="lead mb-5">
-      Du möchtest deine wertvolle Pokémon-Karte professionell einstufen lassen? <br />
+      Du möchtest deine wertvolle Pokémon-Karte professionell einstufen lassen? <br
+      />
       Fülle das Formular aus und sende uns deine Daten – wir kümmern uns um den Rest!
     </p>
 
     <!-- Formular zur Einreichung der Grading-Anfrage -->
-    <form method="POST" action="?/create" class="mx-auto text-start" style="max-width: 700px;">
-
+    <form
+      method="POST"
+      action="?/create"
+      class="mx-auto text-start"
+      style="max-width: 700px;"
+    >
       <!-- Persönliche Angaben -->
       <div class="mb-3 text-start">
         <label for="name" class="form-label">Dein Name</label>
-        <input type="text" id="name" name="name" class="form-control" placeholder="z.B. Max Mustermann" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+          placeholder="z.B. Max Mustermann"
+          required
+        />
       </div>
 
       <!-- Kartendetails -->
       <div class="mb-3 text-start">
         <label for="cardName" class="form-label">Name der Karte</label>
-        <input type="text" id="cardName" name="cardName" class="form-control" placeholder="z.B. Glurak VMAX" required />
+        <input
+          type="text"
+          id="cardName"
+          name="cardName"
+          class="form-control"
+          placeholder="z.B. Glurak VMAX"
+          required
+        />
       </div>
 
       <div class="mb-3 text-start">
         <label for="cardSet" class="form-label">Set / Edition</label>
-        <input type="text" id="cardSet" name="cardSet" class="form-control" placeholder="z.B. Glänzendes Schicksal" required />
+        <input
+          type="text"
+          id="cardSet"
+          name="cardSet"
+          class="form-control"
+          placeholder="z.B. Glänzendes Schicksal"
+          required
+        />
       </div>
 
       <div class="mb-3 text-start">
@@ -46,7 +75,12 @@
 
       <div class="mb-3 text-start">
         <label for="serviceLevel" class="form-label">Geschätzter Zustand</label>
-        <select id="serviceLevel" name="serviceLevel" class="form-select" required>
+        <select
+          id="serviceLevel"
+          name="serviceLevel"
+          class="form-select"
+          required
+        >
           <option value="">Bitte wählen...</option>
           <option>Ausgezeichnet</option>
           <option>Gut</option>
@@ -58,39 +92,84 @@
       <!-- Kontaktinformationen -->
       <div class="mb-3 text-start">
         <label for="email" class="form-label">E-Mail für Rückmeldung</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="deine@email.ch" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          placeholder="deine@email.ch"
+          required
+        />
       </div>
 
       <!-- Adresseingabe -->
       <div class="mb-3 text-start">
         <label for="street" class="form-label">Straße & Hausnummer</label>
-        <input type="text" id="street" name="street" class="form-control" placeholder="z.B. Musterstrasse 12" required />
+        <input
+          type="text"
+          id="street"
+          name="street"
+          class="form-control"
+          placeholder="z.B. Musterstrasse 12"
+          required
+        />
       </div>
 
       <div class="row">
         <div class="col-md-4 mb-3 text-start">
           <label for="postal" class="form-label">PLZ</label>
-          <input type="text" id="postal" name="postal" class="form-control" placeholder="z.B. 8000" required />
+          <input
+            type="text"
+            id="postal"
+            name="postal"
+            class="form-control"
+            placeholder="z.B. 8000"
+            required
+          />
         </div>
         <div class="col-md-4 mb-3 text-start">
           <label for="city" class="form-label">Ort</label>
-          <input type="text" id="city" name="city" class="form-control" placeholder="z.B. Zürich" required />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            class="form-control"
+            placeholder="z.B. Zürich"
+            required
+          />
         </div>
         <div class="col-md-4 mb-3 text-start">
           <label for="country" class="form-label">Land</label>
-          <input type="text" id="country" name="country" class="form-control" placeholder="z.B. Schweiz" required />
+          <input
+            type="text"
+            id="country"
+            name="country"
+            class="form-control"
+            placeholder="z.B. Schweiz"
+            required
+          />
         </div>
       </div>
 
       <!-- Optionales Textfeld -->
       <div class="mb-3 text-start">
-        <label for="notes" class="form-label">Zusätzliche Informationen (optional)</label>
-        <textarea id="notes" name="notes" class="form-control" rows="4" placeholder="z.B. Express-Grading gewünscht, PSA 10 angestrebt ..."></textarea>
+        <label for="notes" class="form-label"
+          >Zusätzliche Informationen (optional)</label
+        >
+        <textarea
+          id="notes"
+          name="notes"
+          class="form-control"
+          rows="4"
+          placeholder="z.B. Express-Grading gewünscht, PSA 10 angestrebt ..."
+        ></textarea>
       </div>
 
       <!-- Absende-Button -->
       <div class="text-center">
-        <button type="submit" class="btn btn-warning btn-lg px-5 mt-3">Anfrage absenden</button>
+        <button type="submit" class="btn btn-warning btn-lg px-5 mt-3"
+          >Anfrage absenden</button
+        >
       </div>
     </form>
 

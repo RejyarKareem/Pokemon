@@ -1,6 +1,6 @@
-import db from '$lib/db.js';
+import db from "$lib/db.js";
 
 export async function load() {
-    const submissions = await db.getAllContactSubmissions();
-    return { submissions };
+  const submissions = await db.getAllContactSubmissions();
+  return { submissions };
 }

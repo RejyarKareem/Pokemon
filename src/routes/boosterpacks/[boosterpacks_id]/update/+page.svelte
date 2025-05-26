@@ -5,7 +5,9 @@
 </script>
 
 <!-- Wrapper mit Farbverlauf & Zentrierung -->
-<div class="detail-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="detail-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5" style="max-width: 600px;">
     <!-- Zurück-Knopf zur Übersicht aller Boosterpacks -->
     <div class="mb-4">
@@ -27,7 +29,7 @@
           name="name"
           class="form-control"
           required
-          value={pack.name} 
+          value={pack.name}
         />
       </div>
 
@@ -70,7 +72,9 @@
 
       <!-- Altersempfehlung-Feld -->
       <div class="mb-3 text-start">
-        <label for="age_recommendation" class="form-label">Altersempfehlung</label>
+        <label for="age_recommendation" class="form-label"
+          >Altersempfehlung</label
+        >
         <input
           id="age_recommendation"
           name="age_recommendation"
@@ -84,18 +88,20 @@
       <div class="mb-3 text-start">
         <p>Aktuelles Bild:</p>
         <img
-          src={pack.poster[0]} 
+          src={pack.poster[0]}
           alt={pack.name}
           class="img-fluid rounded mb-3"
           style="max-height: 200px; object-fit: cover;"
         />
-        <label for="image" class="form-label">Neues Bild auswählen (optional)</label>
+        <label for="image" class="form-label"
+          >Neues Bild auswählen (optional)</label
+        >
         <input
           type="file"
           id="image"
           name="image"
           class="form-control"
-          accept="image/*" 
+          accept="image/*"
         />
       </div>
 
@@ -107,8 +113,9 @@
           name="description"
           class="form-control"
           rows="3"
-          required
-        >{pack.product_details.description}</textarea> <!-- pack.product_details.description -->
+          required>{pack.product_details.description}</textarea
+        >
+        <!-- pack.product_details.description -->
       </div>
 
       <!-- Submit-Button -->
@@ -124,7 +131,9 @@
       <p class="mt-3 text-danger">{form.error}</p>
     {/if}
     {#if form?.success}
-      <p class="mt-3 text-success">Boosterpack wurde erfolgreich aktualisiert!</p>
+      <p class="mt-3 text-success">
+        Boosterpack wurde erfolgreich aktualisiert!
+      </p>
     {/if}
   </div>
 </div>

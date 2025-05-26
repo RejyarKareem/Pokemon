@@ -1,6 +1,6 @@
 <script lang="ts">
   // Import der `enhance`-Funktion für progressive Formulare (verhindert Neuladen der Seite)
-  import { enhance } from '$app/forms';
+  import { enhance } from "$app/forms";
 
   // Zugriff auf die vom Server geladenen Props
   let { data } = $props();
@@ -14,7 +14,7 @@
   const rarities: string[] = data.filters.rarities;
 
   // Import der Komponente zur Darstellung einzelner Pokémon-Karten
-  import PokemonCard from '$lib/components/PokemonCard.svelte';
+  import PokemonCard from "$lib/components/PokemonCard.svelte";
 </script>
 
 <!-- Hauptcontainer mit Hintergrundfarbe und zentralem Layout -->
@@ -24,14 +24,12 @@
     <h1 class="display-4 fw-bold text-center mb-5">Unsere Pokémon-Karten</h1>
 
     <div class="row">
-      
       <!-- Linke Spalte: Filtermenü -->
       <div class="col-md-3 mb-4">
         <h4 class="fw-bold mb-3">Filtern & Sortieren</h4>
 
         <!-- GET-Formular mit `enhance`, um Filterdaten an die URL zu hängen -->
         <form method="GET" use:enhance class="d-flex flex-column gap-3">
-
           <!-- Dropdown: Sets -->
           <select name="set" class="form-select">
             <option value="">Alle Sets</option>
@@ -57,7 +55,12 @@
           </select>
 
           <!-- Eingabefeld für minimale HP -->
-          <input name="hp" type="number" class="form-control" placeholder="Min. HP" />
+          <input
+            name="hp"
+            type="number"
+            class="form-control"
+            placeholder="Min. HP"
+          />
 
           <!-- Dropdown für Sortieroptionen -->
           <select name="sort" class="form-select">
@@ -74,7 +77,9 @@
         </form>
 
         <!-- Link zum Hinzufügen einer neuen Karte -->
-        <a href="/cards/new" class="btn btn-primary mt-4 w-100">Neue Karte hinzufügen</a>
+        <a href="/cards/new" class="btn btn-primary mt-4 w-100"
+          >Neue Karte hinzufügen</a
+        >
       </div>
 
       <!-- Rechte Spalte: Anzeige der Karten -->

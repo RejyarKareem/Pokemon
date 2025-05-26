@@ -1,8 +1,8 @@
-import db from '$lib/db.js';
+import db from "$lib/db.js";
 
 export async function load() {
   return {
-    cards: [] // zuerst keine Karten
+    cards: [], // zuerst keine Karten
   };
 }
 
@@ -23,7 +23,7 @@ export const actions = {
     }
 
     return {
-      cards: drawn
+      cards: drawn,
     };
-  }
+  },
 };

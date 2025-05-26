@@ -4,7 +4,9 @@
 </script>
 
 <!-- Wrapper mit Farbverlauf und zentriertem Inhalt -->
-<div class="detail-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="detail-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5">
     <!-- Kartentitel -->
     <h1 class="display-4 fw-bold text-center mb-5">{card.name}</h1>
@@ -24,7 +26,10 @@
       <div class="col-md-6">
         <ul class="list-group bg-light text-dark mb-4">
           <li class="list-group-item"><strong>Typ:</strong> {card.type}</li>
-          <li class="list-group-item"><strong>Seltenheit:</strong> {card.rarity}</li>
+          <li class="list-group-item">
+            <strong>Seltenheit:</strong>
+            {card.rarity}
+          </li>
           <li class="list-group-item"><strong>HP:</strong> {card.hp}</li>
         </ul>
 
@@ -44,7 +49,10 @@
         <!-- Buttons: Bearbeiten, Zurück, Löschen -->
         <div class="text-center mt-4 d-flex justify-content-center gap-3">
           <!-- Bearbeiten-Link -->
-          <a href={`/cards/${card._id}/update`} class="btn btn-success btn-lg px-4 shadow-sm">
+          <a
+            href={`/cards/${card._id}/update`}
+            class="btn btn-success btn-lg px-4 shadow-sm"
+          >
             Karte bearbeiten
           </a>
 
@@ -60,8 +68,8 @@
               class="btn btn-danger btn-lg px-4 shadow-sm"
               onclick={(e) => {
                 e.preventDefault();
-                if (confirm('Möchtest du diese Karte wirklich löschen?')) {
-                  e.currentTarget.closest('form').submit();
+                if (confirm("Möchtest du diese Karte wirklich löschen?")) {
+                  e.currentTarget.closest("form").submit();
                 }
               }}
             >
@@ -86,11 +94,26 @@
     min-height: 100vh;
   }
   /* Styling für List-Group */
-  .list-group-item { border: none; }
-  .list-group { border-radius: 0.5rem; overflow: hidden; }
-  .bg-light { background-color: #f8f9fa !important; }
-  .text-dark { color: #212529 !important; }
+  .list-group-item {
+    border: none;
+  }
+  .list-group {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  .text-dark {
+    color: #212529 !important;
+  }
   /* Hover-Effekt für Buttons */
-  a.btn, button.btn { transition: transform 0.3s ease-in-out; }
-  a.btn:hover, button.btn:hover { transform: scale(1.05); }
+  a.btn,
+  button.btn {
+    transition: transform 0.3s ease-in-out;
+  }
+  a.btn:hover,
+  button.btn:hover {
+    transform: scale(1.05);
+  }
 </style>

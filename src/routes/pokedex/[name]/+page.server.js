@@ -18,14 +18,14 @@ export async function load({ params }) {
     pokemon: {
       id: data.id,
       name: data.name,
-      image: data.sprites.other['official-artwork'].front_default,
-      types: data.types.map(t => t.type.name),
+      image: data.sprites.other["official-artwork"].front_default,
+      types: data.types.map((t) => t.type.name),
       height: data.height,
       weight: data.weight,
-      stats: data.stats.map(stat => ({
+      stats: data.stats.map((stat) => ({
         name: stat.stat.name,
-        value: stat.base_stat
-      }))
-    }
+        value: stat.base_stat,
+      })),
+    },
   };
 }

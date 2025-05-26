@@ -4,7 +4,9 @@
 </script>
 
 <!-- Hintergrund und Zentrierung der Kontakt-Submissions-Seite -->
-<div class="contact-bg text-white d-flex align-items-center justify-content-center">
+<div
+  class="contact-bg text-white d-flex align-items-center justify-content-center"
+>
   <div class="container py-5" style="max-width: 800px;">
     <!-- Seitenüberschrift -->
     <h1 class="display-4 fw-bold text-center mb-5">Meine Kontaktanfragen</h1>
@@ -17,7 +19,9 @@
       <div class="list-group mb-4">
         {#each submissions as sub (sub._id)}
           <!-- Einzelne Anfrage als Card-ähnliches List-Group-Item -->
-          <div class="list-group-item bg-light text-dark rounded shadow-sm mb-3">
+          <div
+            class="list-group-item bg-light text-dark rounded shadow-sm mb-3"
+          >
             <div class="d-flex justify-content-between align-items-start">
               <div>
                 <!-- Name und E-Mail des Absenders -->
@@ -27,12 +31,12 @@
               <div class="text-end">
                 <!-- Erstellungszeitpunkt -->
                 <small class="text-muted">
-                  {new Date(sub.createdAt).toLocaleString('de-CH')}
+                  {new Date(sub.createdAt).toLocaleString("de-CH")}
                 </small>
                 <br />
                 <!-- Status-Badge mit Fallback 'In Bearbeitung' -->
                 <span class="badge bg-primary mt-1">
-                  {sub.status ?? 'In Bearbeitung'}
+                  {sub.status ?? "In Bearbeitung"}
                 </span>
               </div>
             </div>
@@ -63,7 +67,9 @@
     border: none;
   }
   /* Textfarben in Überschrift, Absätzen, kleinen Texten */
-  h1, p, small {
+  h1,
+  p,
+  small {
     color: #212529;
   }
   /* Badge-Layout */

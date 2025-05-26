@@ -1,5 +1,4 @@
 <script lang="ts">
-  
   interface Props {
     // Der Boosterpack wird als Prop übergeben
     pack: any;
@@ -13,8 +12,8 @@
 <div class="card h-100 shadow-sm">
   <!-- Bild: zeigt das erste Poster des Packs, zentriert und skaliert -->
   <img
-    src={pack.poster[0]}            
-    alt={pack.name}                 
+    src={pack.poster[0]}
+    alt={pack.name}
     class="card-img-top mx-auto d-block"
     style="object-fit: cover; max-height: 250px; width: auto;"
   />
@@ -25,10 +24,12 @@
 
     <!-- Informationen: Sprache und Karten pro Pack -->
     <p class="card-text fs-6 mb-1">
-      <strong>Sprache:</strong> {pack.language}
+      <strong>Sprache:</strong>
+      {pack.language}
     </p>
     <p class="card-text fs-6 mb-1">
-      <strong>Karten pro Pack:</strong> {pack.cards_per_pack}
+      <strong>Karten pro Pack:</strong>
+      {pack.cards_per_pack}
     </p>
 
     <!-- Link zu Detailseite, am unteren Rand platziert -->
