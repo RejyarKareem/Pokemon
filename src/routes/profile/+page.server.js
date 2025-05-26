@@ -1,4 +1,4 @@
-import db from '$lib/db.js'; // Import der Datenbankzugriffslogik
+import db from '$lib/db.js';
 
 const userId = 'pokefan'; // Fester Benutzername (vereinfachte Authentifizierung)
 
