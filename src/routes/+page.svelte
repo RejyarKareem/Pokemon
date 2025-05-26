@@ -3,7 +3,7 @@
 >
   <div class="container text-center py-5">
 
-    <!-- Eingebettetes Video (z. B. Pokémon-Themesong) als visuelles Intro -->
+    <!-- Eingebettetes Video als visuelles Intro -->
     <div class="image-container mb-5">
       <div class="video-wrapper">
         <video
