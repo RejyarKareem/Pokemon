@@ -1,4 +1,4 @@
-import db from '$lib/db.js'; // Import der Datenbankfunktionen
+import db from '$lib/db.js';
 
 export const actions = {
   // Standardaktion zum Verarbeiten des Formulars
